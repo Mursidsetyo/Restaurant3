@@ -27,6 +27,8 @@ Scenario('Unliking one resto', async ({ I }) => {
 
   const firstRestoLiking = locate('.header-name').first();
   I.click(firstRestoLiking);
- 
+  I.seeElement('#likeButton');
+  I.amOnPage('/#/like');
+  I.dontSee('Tidak Ada Restoran Favorit', '.restaurants');
   
 });
